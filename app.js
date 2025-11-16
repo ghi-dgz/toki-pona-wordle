@@ -72,6 +72,7 @@ function drawKeyboard(keyStates = {}) {
         row.forEach(key => {
             const btn = document.createElement('button');
             btn.className = 'key';
+            btn.textContent = key === 'Enter' ? '↳' : key;
             btn.textContent = key === 'Backspace' ? '⌫' : key;
             if (keyStates[key]) btn.classList.add('key-' + keyStates[key]);
             btn.onclick = () => handleKey(key);
