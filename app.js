@@ -15,8 +15,8 @@ let board = [];
 let gameOver = false;
 
 function getWord() {
+    answerIndex = Math.floor(Math.random() * (anslist.length));
     const word = anslist[answerIndex % anslist.length];
-    answerIndex++;
     return word;
 }
 
